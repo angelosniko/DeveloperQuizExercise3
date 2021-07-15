@@ -7,8 +7,8 @@
 
         <Entry Keyboard="Numeric" Placeholder="Enter value of tip" x:Name="NameTextBox"/>
         <Button Text="Click me to Next Page" x:Name="MyButton" Clicked="MyButton_Clicked" BackgroundColor="CornflowerBlue" HeightRequest="50"/>
-        
 
-    </StackLayout>b   
+
+    </StackLayout>
 
 </ContentPage>
