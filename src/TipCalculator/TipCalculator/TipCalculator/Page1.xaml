@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tip_Splitter.Page1">
+    <ContentPage.Content>
+        
+        
+        
+        <StackLayout>
+            <Label x:Name="LabelPeople"
+                   Text="Select Number of People"
+                   FontSize="25"/>
+            
+            <Picker x:Name="picker"
+                    SelectedIndexChanged="picker_SelectedIndexChanged"
+        Title="Select Number"
+        TitleColor="#3864b9">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                        <x:String>6</x:String>
+                        <x:String>7</x:String>
+                        <x:String>8</x:String>
+                        <x:String>9</x:String>
+                        <x:String>10</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            
+
+
+
+
+
+            <Label Text="Add percentage" FontSize="25"/>
+
+            <Slider x:Name="PercentSlider"
+                    Maximum="100"
+                    Minimum="0"
+                    ValueChanged="PercentSlider_ValueChanged"
+                    />
+
+            <Label x:Name="Slider_Label"
+                   Text="0"
+                   FontSize="25"/>
+
+
+
+            <Label x:Name="LabelVal1"
+                   Text="TIP Total(£)"
+                   FontSize="25"/>
+
+
+
+
+
+
+            <Entry x:Name="TipLabel" HorizontalOptions="End" TextChanged="TipLabel_TextChanged" TextColor="#3864b9" FontSize="Title" Text="0.00" Keyboard="Numeric">
+                <Entry.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="RobotoSlab-Bold" />
+                    </OnPlatform>
+                </Entry.FontFamily>
+            </Entry>
+
+
+
+            <Label x:Name="LabelVal2"
+                   Text="Price Per Person(£)"
+                   FontSize="25"/>
+
+
+
+            <Label x:Name="PricePerPerson" HorizontalOptions="End"   TextColor="#3864b9" FontSize="Title" Text="£0.00">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="RobotoSlab-Bold" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+
+           
+
+
+
+
+        </StackLayout>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </ContentPage.Content>
+</ContentPage>
