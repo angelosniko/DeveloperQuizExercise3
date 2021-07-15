@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tip_Splitter.MainPage">
+
+    <StackLayout Padding="50">
+
+        <Entry Keyboard="Numeric" Placeholder="Enter value of tip" x:Name="NameTextBox"/>
+        <Button Text="Click me to Next Page" x:Name="MyButton" Clicked="MyButton_Clicked" BackgroundColor="CornflowerBlue" HeightRequest="50"/>
+
+
+    </StackLayout>
+
+</ContentPage>

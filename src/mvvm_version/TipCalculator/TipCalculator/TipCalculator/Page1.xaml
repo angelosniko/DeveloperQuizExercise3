@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tip_Splitter.Page1">
+    <ContentPage.Content>
+        
+        
+        
+        <StackLayout>
+            <Label Text="Please select the number of people" FontSize="Micro"/>
+
+
+            <Picker Title="--Select--"
+                    ItemsSource="{Binding NumberList}"
+                    ItemDisplayBinding="{Binding Value}"
+                    SelectedItem="{Binding SelectectItem}"
+                    />
+
+
+
+
+
+
+
+
+            <Label Text="Add percentage" FontSize="25"/>
+
+            <Slider x:Name="PercentSlider"
+                    Maximum="100"
+                    Minimum="0"
+                    Value="{Binding SliderValue}"
+                    />
+
+            <Label x:Name="Slider_Label"
+                   
+                   Text="{Binding SliderValue}"
+                   FontSize="25"/>
+
+
+
+            <Label x:Name="LabelVal1"
+                   Text="TIP Total(£)"
+                   FontSize="25"/>
+
+
+
+
+
+
+            <Entry x:Name="TipLabel" HorizontalOptions="FillAndExpand" Text="{Binding Text}" TextColor="#3864b9" FontSize="Title" Keyboard="Numeric">
+                <Entry.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="RobotoSlab-Bold" />
+                    </OnPlatform>
+                </Entry.FontFamily>
+            </Entry>
+
+
+
+            <Label x:Name="LabelVal2"
+                   Text="Price Per Person(£)"
+                   FontSize="25"/>
+
+
+
+            <Label x:Name="PricePerPerson" HorizontalOptions="End"   TextColor="#3864b9" FontSize="Title"  Text="{Binding PriceValue}">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="RobotoSlab-Bold" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+
+           
+
+
+
+
+        </StackLayout>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </ContentPage.Content>
+</ContentPage>
