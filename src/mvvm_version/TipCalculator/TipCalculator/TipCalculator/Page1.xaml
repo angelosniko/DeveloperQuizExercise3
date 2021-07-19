@@ -16,13 +16,6 @@
                     SelectedItem="{Binding SelectectItem}"
                     />
 
-
-
-
-
-
-
-
             <Label Text="Add percentage" FontSize="25"/>
 
             <Slider x:Name="PercentSlider"

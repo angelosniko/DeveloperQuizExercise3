@@ -32,15 +32,9 @@ namespace TipCalculator
             };
 
             return keyvalue;
-
-
         }
-
-
-
         public class KeyValuePair
         {
-
             public int key { get; set; }
             public String Value { get; set; }
 
@@ -55,24 +49,28 @@ namespace TipCalculator
 
         public string Text
         {
-            get { return (_constvalue * _slidervalue / 100).ToString(); }
+            get
+            {
+                    return (_constvalue * _slidervalue / 100).ToString();            
+            }
+
             set
             {
-                var p = double.Parse(value);
-                SliderValue = p / _constvalue * 100;
-                
-                
-
-
-
-
+                if (!string.IsNullOrEmpty(value)) {
+                    var p = double.Parse(value);
+                    var slidevalue = p / _constvalue * 100;
+                    SliderValue = slidevalue;
+                } 
+                else { value="0"; }
             }
         }
 
         private KeyValuePair _selectItem;
         public KeyValuePair SelectectItem {
 
-            get { return _selectItem; }
+            get { 
+                 
+                return _selectItem; }
 
             set {
                 if (_selectItem != value) {
@@ -82,16 +80,8 @@ namespace TipCalculator
                     OnPropertyChanged(nameof(PriceValue));
 
                 }
-
-            
             
             }
-
-            
-
-        
-        
-        
         }
 
 
@@ -103,7 +93,7 @@ namespace TipCalculator
                 if (_selectItem != null)
                 {
 
-                    var val2 = (val + _constvalue) / Convert.ToDouble(_selectItem.Value);
+                    var val2 = Math.Round((val + _constvalue) / Convert.ToDouble(_selectItem.Value), 2); 
                     return val2;
                 }
                 else {
@@ -111,24 +101,15 @@ namespace TipCalculator
 
                     return 0;
                 }
-               
-
-                
+  
 
             }
 
-
             private set { 
-            
-            
+
             
             }
         }
-
-
-
-
-
         public double SliderValue
         {
             get { return _slidervalue; }
