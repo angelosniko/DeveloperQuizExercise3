@@ -61,7 +61,7 @@ namespace TipCalculator
                     var slidevalue = p / _constvalue * 100;
                     SliderValue = slidevalue;
                 } 
-                else { value="0"; }
+                else { Text="0"; }
             }
         }
 
